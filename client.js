@@ -30,17 +30,4 @@ Client.prototype.authenticate = function (accessToken) {
   this.apiClient.accessToken = accessToken
 }
 
-// Client.prototype.generateToken = function () {
-//   var _this = this
-//
-//   var callback = function(error, data) {
-//     _this.apiClient.ApiClient.instance.authentications['OAuth2'].accessToken = data.access_token
-//   }
-//
-//   var access = this.authorization.generate({
-//     clientId: this.configuration.clientId,
-//     clientSecret: this.configuration.clientSecret,
-//   }, callback)
-// }
-
 module.exports = Client

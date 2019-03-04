@@ -41,7 +41,7 @@ const QUOTE = {
 }
 
 const CONTACT = {
-  email: 'test+contact@domain.com',
+  email: `test+contact2@domain.com`,
   firstName: 'FName',
   lastName: 'LName',
   isoCountryCode: 'US',
@@ -53,7 +53,8 @@ const CONTACT = {
 var callback = function(error, data, response) {
   if (error) {
     console.warn('ERROR')
-    console.error(JSON.parse(error, null, 2))
+    // console.error(JSON.parse(error, null, 2))
+    console.warn(response.request)
     console.warn('ERROR')
   } else {
     console.log('API called successfully.')
@@ -79,16 +80,16 @@ const veemSDK = new VeemSDK({
 
 // veemSDK.payment.list(callback)
 // veemSDK.payment.get(54090, callback)
-veemSDK.payment.draft(PAYMENT, callback)
+// veemSDK.payment.draft(PAYMENT, callback)
 // veemSDK.payment.send(PAYMENT, callback)
-// veemSDK.payment.sendById(54097, callback)
-// veemSDK.payment.cancel(54098, callback)
+// veemSDK.payment.sendById(54133, callback)
+// veemSDK.payment.cancel(54135, callback)
 
-// veemSDK.invoice.get(54090, callback)
+// veemSDK.invoice.get(36909, callback)
 // veemSDK.invoice.draft(INVOICE, callback)
 // veemSDK.invoice.send(INVOICE, callback)
-// veemSDK.invoice.sendById(36909, callback)
-// veemSDK.invoice.cancel(36909, callback)
+// veemSDK.invoice.sendById(36913, callback)
+// veemSDK.invoice.cancel(36913, callback)
 
 // veemSDK.contact.list(callback)
 // veemSDK.contact.get(1459, callback)
