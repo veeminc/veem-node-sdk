@@ -26,6 +26,7 @@
     "chai-nock": "^1.1.0",
     "jest": "^24.1.0",
     "lodash.assign": "^4.2.0",
+    "lodash.matches": "^4.6.0",
     "lodash.merge": "^4.6.1",
     "moment": "^2.24.0",
     "nock": "^10.0.6",
