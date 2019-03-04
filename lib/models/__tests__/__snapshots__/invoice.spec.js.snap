@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Invoice Model should match the snapshot 1`] = `
+Object {
+  "properties": Object {
+    "amount": Object {
+      "properties": Object {
+        "amount": Object {
+          "type": "number",
+        },
+        "currency": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
+    "approveAutomatically": Object {
+      "type": "boolean",
+    },
+    "ccEmails": Object {
+      "items": Object {
+        "type": "string",
+      },
+      "type": "array",
+    },
+    "dueDate": Object {
+      "type": "string",
+    },
+    "exchangeRateQuoteId": Object {
+      "type": "string",
+    },
+    "externalInvoiceRefId": Object {
+      "type": "string",
+    },
+    "notes": Object {
+      "type": "string",
+    },
+    "payer": Object {
+      "properties": Object {
+        "businessName": Object {
+          "type": "string",
+        },
+        "countryCode": Object {
+          "type": "string",
+        },
+        "email": Object {
+          "type": "string",
+        },
+        "firstName": Object {
+          "type": "string",
+        },
+        "lastName": Object {
+          "type": "string",
+        },
+        "phone": Object {
+          "type": "string",
+        },
+        "type": Object {
+          "enum": Array [
+            "Incomplete",
+            "Business",
+            "Personal",
+          ],
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
+    "purposeOfPayment": Object {
+      "enum": Array [
+        "Goods",
+        "Services",
+        "Charitable",
+        "Other",
+      ],
+      "type": "string",
+    },
+  },
+  "title": "Invoice",
+  "type": "object",
+}
+`;

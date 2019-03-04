@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Payer Model should match the snapshot 1`] = `
+Object {
+  "properties": Object {
+    "businessName": Object {
+      "type": "string",
+    },
+    "countryCode": Object {
+      "type": "string",
+    },
+    "email": Object {
+      "type": "string",
+    },
+    "firstName": Object {
+      "type": "string",
+    },
+    "lastName": Object {
+      "type": "string",
+    },
+    "phone": Object {
+      "type": "string",
+    },
+    "type": Object {
+      "enum": Array [
+        "Incomplete",
+        "Business",
+        "Personal",
+      ],
+      "type": "string",
+    },
+  },
+  "title": "Payer",
+  "type": "Object",
+}
+`;

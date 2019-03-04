@@ -19,9 +19,6 @@ function Client(configuration) {
   this.contact = new Contact(this)
   this.customer = new Customer(this)
 
-
-  // this.attachment = new Attachment(this)
-
   this.setup(configuration)
   this.generateToken()
 }
