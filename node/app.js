@@ -80,7 +80,7 @@ const veemSDK = new VeemSDK({
 
 // veemSDK.payment.list(callback)
 // veemSDK.payment.get(54090, callback)
-// veemSDK.payment.draft(PAYMENT, callback)
+veemSDK.payment.draft(PAYMENT, callback)
 // veemSDK.payment.send(PAYMENT, callback)
 // veemSDK.payment.sendById(54133, callback)
 // veemSDK.payment.cancel(54135, callback)
