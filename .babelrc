@@ -1,7 +1,15 @@
 {
   "plugins": [
     "@babel/plugin-syntax-dynamic-import",
-    "@babel/plugin-transform-runtime"
+    "@babel/plugin-transform-runtime",
+    ["module-resolver", {
+      "alias": {
+        "constants": "./lib/constants",
+        "models": "./lib/models",
+        "resources": "./lib/resources",
+        "utils": "./lib/utils",
+      }
+    }]
   ],
   "presets": [
     "@babel/preset-env"
