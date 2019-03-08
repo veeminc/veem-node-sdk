@@ -10,7 +10,8 @@
   },
   "scripts": {
     "test": "jest",
-    "start": "nodemon --exec babel-node node/app.js"
+    "start": "nodemon --exec babel-node node/app.js",
+    "build": "babel lib -d dist"
   },
   "dependencies": {
     "lodash.trim": "^4.5.1",
@@ -20,6 +21,7 @@
     "uber-json-schema-filter": "^2.0.5"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
     "@babel/node": "^7.2.2",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",

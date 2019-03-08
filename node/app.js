@@ -1,5 +1,5 @@
 /* eslint-disable */
-import VeemSDK from '../'
+import VeemSDK from '../lib'
 
 const PAYMENT = {
   amount: {
