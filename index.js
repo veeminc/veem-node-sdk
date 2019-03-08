@@ -1,15 +1,14 @@
-import Client from './client'
-import merge from 'lodash/merge'
+var Client = require('./client')
 
-const defaultConfiguration = {
+var defaultConfiguration = {
   type: 'oauth2',
   accessToken: null,
 }
 
-const VeemSDK = params => {
-  const configuration = merge({}, defaultConfiguration, params)
+function VeemSDK(params) {
+  this.configuration = Object.assign({}, defaultConfiguration, params)
 
-  return new Client(configuration)
+  return new Client(this.configuration)
 }
 
-export default VeemSDK
+module.exports = VeemSDK
