@@ -75,12 +75,12 @@ function main() {
 const veemSDK = new VeemSDK({
   accessToken: '246ff312-f7ff-496f-bab2-38d132434ba7',
 })
-
+var file = __dirname+'/attachment.txt'
 // veemSDK.metadata.getCountryCurrencyMap(callback)
 
 // veemSDK.payment.list(callback)
 // veemSDK.payment.get(54090, callback)
-veemSDK.payment.draft(PAYMENT, callback)
+// veemSDK.payment.draft(PAYMENT, callback)
 // veemSDK.payment.send(PAYMENT, callback)
 // veemSDK.payment.sendById(54133, callback)
 // veemSDK.payment.cancel(54135, callback)
@@ -99,4 +99,4 @@ veemSDK.payment.draft(PAYMENT, callback)
 
 // veemSDK.exchangeRate.quote(QUOTE, callback)
 
-// veemSDK.attachment.upload(file, callback)
+veemSDK.attachment.upload(file, callback)

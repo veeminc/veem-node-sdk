@@ -22,6 +22,7 @@ Client.prototype.setup = function (configuration) {
   this.exchangeRate = new ExchangeRate(this.apiClient)
   this.contact = new Contact(this.apiClient)
   this.customer = new Customer(this.apiClient)
+  this.attachment = new Attachment(this.apiClient)
 }
 
 Client.prototype.authenticate = function (accessToken) {
