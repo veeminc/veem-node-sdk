@@ -11,11 +11,10 @@
   "scripts": {
     "test": "jest",
     "start": "nodemon --exec babel-node node/app.js",
-    "build": "babel lib -d dist"
+    "build": "babel lib -d dist --ignore '**/__tests__'"
   },
   "dependencies": {
-    "lodash.trim": "^4.5.1",
-    "lodash.uniqueid": "^4.0.1",
+    "lodash": "^4.17.11",
     "querystring": "^0.2.0",
     "superagent": "^4.1.0",
     "uber-json-schema-filter": "^2.0.5"
@@ -41,9 +40,6 @@
     "husky": "^1.3.1",
     "jest": "^24.1.0",
     "lint-staged": "^8.1.5",
-    "lodash.assign": "^4.2.0",
-    "lodash.matches": "^4.6.0",
-    "lodash.merge": "^4.6.1",
     "moment": "^2.24.0",
     "nock": "^10.0.6",
     "nodemon": "^1.18.10",
