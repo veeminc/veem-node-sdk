@@ -100,4 +100,4 @@ var imageBuffer = fs.createReadStream(file)
 
 // veemSDK.exchangeRate.quote(QUOTE, callback)
 
-// veemSDK.attachment.upload(imageBuffer, callback)
+veemSDK.attachment.upload(imageBuffer, callback)
