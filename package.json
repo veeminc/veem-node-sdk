@@ -39,7 +39,7 @@
   },
   "scripts": {
     "test": "jest",
-    "start": "DEBUG=logDebug,curlDebug node node/app.js"
+    "start": "node node/app.js"
   },
   "author": "",
   "license": "ISC"
