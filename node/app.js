@@ -59,8 +59,6 @@ var callback = function(error, data, response) {
   } else {
     console.log('API called successfully.')
     console.log(JSON.parse(data, null, 2))
-
-    console.log(response)
   }
 }
 
@@ -102,4 +100,4 @@ var imageBuffer = fs.createReadStream(file)
 
 // veemSDK.exchangeRate.quote(QUOTE, callback)
 
-veemSDK.attachment.upload(imageBuffer, callback)
+// veemSDK.attachment.upload(imageBuffer, callback)
