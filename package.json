@@ -9,14 +9,10 @@
   "dependencies": {
     "@babel/core": "^7.3.3",
     "@babel/preset-env": "^7.3.1",
-    "form-data": "^2.3.3",
-    "formdata-node": "^1.5.1",
     "lodash.trim": "^4.5.1",
     "lodash.uniqueid": "^4.0.1",
     "querystring": "^0.2.0",
-    "request": "^2.88.0",
     "superagent": "^4.1.0",
-    "superagent-debugger": "^1.2.9",
     "uber-json-schema-filter": "^2.0.5"
   },
   "devDependencies": {
