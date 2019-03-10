@@ -59,6 +59,8 @@ var callback = function(error, data, response) {
   } else {
     console.log('API called successfully.')
     console.log(JSON.parse(data, null, 2))
+
+    console.log(response)
   }
 }
 
@@ -75,7 +77,8 @@ function main() {
 const veemSDK = new VeemSDK({
   accessToken: '246ff312-f7ff-496f-bab2-38d132434ba7',
 })
-var file = __dirname+'/attachment.txt'
+var file = __dirname+'/image.png'
+var imageBuffer = fs.createReadStream(file)
 // veemSDK.metadata.getCountryCurrencyMap(callback)
 
 // veemSDK.payment.list(callback)
@@ -99,4 +102,4 @@ var file = __dirname+'/attachment.txt'
 
 // veemSDK.exchangeRate.quote(QUOTE, callback)
 
-veemSDK.attachment.upload(file, callback)
+veemSDK.attachment.upload(imageBuffer, callback)
