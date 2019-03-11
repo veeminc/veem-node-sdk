@@ -73,8 +73,8 @@ const {
   accessToken: '246ff312-f7ff-496f-bab2-38d132434ba7',
 })
 
-var file = __dirname+'/image.png'
-var imageBuffer = fs.createReadStream(file)
+const file = __dirname+'/image.png'
+const imageBuffer = fs.createReadStream(file)
 
 // metadata.getCountryCurrencyMap(callback)
 
