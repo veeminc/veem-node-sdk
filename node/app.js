@@ -1,10 +1,10 @@
-var VeemSDK = require('../')
-var fs = require('fs')
+/* eslint-disable */
+import VeemSDK from '../lib'
 
 const PAYMENT = {
   amount: {
     currency: 'USD',
-    number: 100.00
+    number: 100.00,
   },
   payee: {
     countryCode: 'CA',
@@ -12,14 +12,14 @@ const PAYMENT = {
     firstName: 'test2',
     lastName: 'test2',
     type: 'Personal',
-    phone: '+1-613-555-1234'
-  }
+    phone: '+1-613-555-1234',
+  },
 }
 
 const INVOICE = {
   amount: {
     currency: 'USD',
-    number: 100.00
+    number: 100.00,
   },
   payer: {
     countryCode: 'CA',
@@ -27,8 +27,8 @@ const INVOICE = {
     firstName: 'test2',
     lastName: 'test2',
     type: 'Personal',
-    phone: '+1-613-555-1234'
-  }
+    phone: '+1-613-555-1234',
+  },
 }
 
 const QUOTE = {
@@ -50,53 +50,46 @@ const CONTACT = {
   businessName: 'BName',
 }
 
-var callback = function(error, data, response) {
+const callback = (error, data, response) => {
   if (error) {
     console.warn('ERROR')
-    // console.error(JSON.parse(error, null, 2))
     console.warn(response.request)
-    console.warn('ERROR')
   } else {
     console.log('API called successfully.')
     console.log(JSON.parse(data, null, 2))
   }
 }
 
-function main() {
-  // var file = fs.readFileSync(__dirname+'/attachment.txt')
-  var file = __dirname+'/attachment.txt'
-}
-
-// const veemSDK = new VeemSDK({
-//   clientId: 'BizName-4be1d204',
-//   clientSecret: '732b5451-5265-4daa-8aea-335971603ef1',
-// })
-
-const veemSDK = new VeemSDK({
+const {
+  metadata,
+  payment,
+  invoice,
+  contact,
+  customer,
+  exchangeRate,
+} = new VeemSDK({
   accessToken: '246ff312-f7ff-496f-bab2-38d132434ba7',
 })
 
-// veemSDK.metadata.getCountryCurrencyMap(callback)
+// metadata.getCountryCurrencyMap(callback)
 
-// veemSDK.payment.list(callback)
-// veemSDK.payment.get(54090, callback)
-// veemSDK.payment.draft(PAYMENT, callback)
-// veemSDK.payment.send(PAYMENT, callback)
-// veemSDK.payment.sendById(54133, callback)
-// veemSDK.payment.cancel(54135, callback)
+// payment.list(callback)
+// payment.get(54090, callback)
+// payment.draft(PAYMENT, callback)
+// payment.send(PAYMENT, callback)
+// payment.sendById(54133, callback)
+// payment.cancel(54135, callback)
 
-// veemSDK.invoice.get(36909, callback)
-// veemSDK.invoice.draft(INVOICE, callback)
-// veemSDK.invoice.send(INVOICE, callback)
-// veemSDK.invoice.sendById(36913, callback)
-// veemSDK.invoice.cancel(36913, callback)
+// invoice.get(36909, callback)
+// invoice.draft(INVOICE, callback)
+// invoice.send(INVOICE, callback)
+// invoice.sendById(36913, callback)
+// invoice.cancel(36913, callback)
 
-// veemSDK.contact.list(callback)
-// veemSDK.contact.get(1459, callback)
-// veemSDK.contact.create(CONTACT, callback)
+// contact.list(callback)
+// contact.get(1459, callback)
+// contact.create(CONTACT, callback)
 
-// veemSDK.customer.list('bitheads2@mailinator.com', callback)
+// customer.list('bitheads2@mailinator.com', callback)
 
-// veemSDK.exchangeRate.quote(QUOTE, callback)
-
-// veemSDK.attachment.upload(file, callback)
+// exchangeRate.quote(QUOTE, callback)
