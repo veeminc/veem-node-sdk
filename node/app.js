@@ -76,6 +76,11 @@ const {
 const file = __dirname+'/image.png'
 const imageBuffer = fs.createReadStream(file)
 
+const attachmentModel = {
+  name: 'image.png',
+  referenceId: '42b62c7d-3dac-4622-a307-8927b7e5d06e',
+}
+
 // metadata.getCountryCurrencyMap(callback)
 
 // payment.list(callback)
@@ -100,3 +105,4 @@ const imageBuffer = fs.createReadStream(file)
 // exchangeRate.quote(QUOTE, callback)
 
 // attachment.upload(imageBuffer, callback)
+attachment.download(attachmentModel, callback)
