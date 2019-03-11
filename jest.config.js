@@ -1,7 +1,7 @@
 module.exports = {
   collectCoverageFrom: [
-    "**/*.js",
-    "!**/node_modules/**",
+    '**/*.js',
+    '!**/node_modules/**',
   ],
   coverageDirectory: '_coverage',
   moduleDirectories: ['lib', 'node_modules'],
@@ -12,4 +12,4 @@ module.exports = {
   ],
   testMatch: ['**/__tests__/?(*.)+(spec).js'],
   verbose: true,
-};
+}
