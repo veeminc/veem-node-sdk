@@ -96,4 +96,4 @@ const {
 // exchangeRate.quote(QUOTE, callback)
 
 // webhook.get(1, callback)
-webhook.list(callback)
+// webhook.list(callback)
