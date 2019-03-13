@@ -1,4 +1,5 @@
 /* eslint-disable */
+import first from 'lodash/first'
 import VeemSDK from '../lib'
 
 const PAYMENT = {
@@ -40,15 +41,30 @@ const QUOTE = {
   toCurrency: 'USD',
 }
 
-const CONTACT = {
-  email: `test+contact2@domain.com`,
-  firstName: 'FName',
-  lastName: 'LName',
-  isoCountryCode: 'US',
-  phoneDialCode: '+1',
-  phoneNumber: '6132451245',
-  businessName: 'BName',
-}
+const CONTACTS = [
+  {
+    batchItemId: 1,
+    email: `test+contact1@domain.com`,
+    firstName: 'FName1',
+    lastName: 'LName1',
+    isoCountryCode: 'US',
+    phoneDialCode: '+1',
+    phoneNumber: '6132451245',
+    businessName: 'BName1',
+  },
+  {
+    batchItemId: 2,
+    email: `test+contact2@domain.com`,
+    firstName: 'FName2',
+    lastName: 'LName2',
+    isoCountryCode: 'CA',
+    phoneDialCode: '+1',
+    phoneNumber: '6132451245',
+    businessName: 'BName2',
+  },
+]
+
+const CONTACT = first(CONTACTS)
 
 const callback = (error, data, response) => {
   if (error) {
@@ -89,6 +105,7 @@ const {
 // contact.list(callback)
 // contact.get(1459, callback)
 // contact.create(CONTACT, callback)
+// contact.create(CONTACTS, callback)
 
 // customer.list('bitheads2@mailinator.com', callback)
 
