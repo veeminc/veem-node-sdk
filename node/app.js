@@ -108,4 +108,4 @@ const {
 // customer.list('bitheads2@mailinator.com', callback)
 
 // exchangeRate.quote(QUOTE, callback)
-// exchangeRate.quotes(QUOTES, callback)
+// exchangeRate.quote(QUOTES, callback)
