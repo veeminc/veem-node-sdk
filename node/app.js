@@ -67,6 +67,7 @@ const {
   contact,
   customer,
   exchangeRate,
+  webhook,
 } = new VeemSDK({
   accessToken: '246ff312-f7ff-496f-bab2-38d132434ba7',
 })
@@ -93,3 +94,5 @@ const {
 // customer.list('bitheads2@mailinator.com', callback)
 
 // exchangeRate.quote(QUOTE, callback)
+
+// webhook.get(1, callback)
