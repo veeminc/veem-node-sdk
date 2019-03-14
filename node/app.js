@@ -98,6 +98,7 @@ const {
   contact,
   customer,
   exchangeRate,
+  webhook,
 } = new VeemSDK({
   accessToken: '246ff312-f7ff-496f-bab2-38d132434ba7',
 })
@@ -127,3 +128,5 @@ const {
 
 // exchangeRate.quote(QUOTE, callback)
 // exchangeRate.quote(QUOTES, callback)
+
+// webhook.get(1, callback)
