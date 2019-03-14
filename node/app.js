@@ -82,6 +82,7 @@ const {
 // payment.cancel(54135, callback)
 
 // invoice.get(36909, callback)
+// invoice.getBatch(123, callback)
 // invoice.draft(INVOICE, callback)
 // invoice.send(INVOICE, callback)
 // invoice.sendById(36913, callback)
