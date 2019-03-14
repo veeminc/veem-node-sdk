@@ -1,7 +1,7 @@
 /* eslint-disable */
 import first from 'lodash/first'
 import VeemSDK from '../lib'
-import first from 'lodash/first'
+import fs from 'fs'
 
 const PAYMENT = {
   amount: {
@@ -98,10 +98,14 @@ const {
   contact,
   customer,
   exchangeRate,
+  attachment,
   webhook,
 } = new VeemSDK({
   accessToken: '246ff312-f7ff-496f-bab2-38d132434ba7',
 })
+
+const file = __dirname+'/image.png'
+const imageBuffer = fs.createReadStream(file)
 
 // metadata.getCountryCurrencyMap(callback)
 
@@ -128,6 +132,8 @@ const {
 
 // exchangeRate.quote(QUOTE, callback)
 // exchangeRate.quote(QUOTES, callback)
+
+// attachment.upload(imageBuffer, callback)
 
 // webhook.get(1, callback)
 // webhook.list(callback)
