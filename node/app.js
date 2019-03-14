@@ -76,13 +76,13 @@ const {
 
 // payment.list(callback)
 // payment.get(54090, callback)
+// payment.getBatch(123, callback)
 // payment.draft(PAYMENT, callback)
 // payment.send(PAYMENT, callback)
 // payment.sendById(54133, callback)
 // payment.cancel(54135, callback)
 
 // invoice.get(36909, callback)
-// invoice.getBatch(123, callback)
 // invoice.draft(INVOICE, callback)
 // invoice.send(INVOICE, callback)
 // invoice.sendById(36913, callback)
