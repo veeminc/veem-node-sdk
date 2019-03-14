@@ -1,5 +1,6 @@
 /* eslint-disable */
 import VeemSDK from '../lib'
+import first from 'lodash/first'
 
 const PAYMENT = {
   amount: {
@@ -31,14 +32,28 @@ const INVOICE = {
   },
 }
 
-const QUOTE = {
-  fromAmount: 100,
-  fromCurrency: 'USD',
-  recipientAccountEmail: 'test@domain.com',
-  toAmount: undefined,
-  toCountry: 'US',
-  toCurrency: 'USD',
-}
+const QUOTES = [
+  {
+    batchItemId: 1,
+    fromAmount: 100,
+    fromCurrency: 'USD',
+    recipientAccountEmail: 'test@domain.com',
+    toAmount: undefined,
+    toCountry: 'US',
+    toCurrency: 'USD',
+  },
+  {
+    batchItemId: 2,
+    fromAmount: 127,
+    fromCurrency: 'CAD',
+    recipientAccountEmail: 'test@domain.com',
+    toAmount: undefined,
+    toCountry: 'US',
+    toCurrency: 'USD',
+  }
+]
+
+const QUOTE = first(QUOTES)
 
 const CONTACT = {
   email: `test+contact2@domain.com`,
@@ -93,3 +108,4 @@ const {
 // customer.list('bitheads2@mailinator.com', callback)
 
 // exchangeRate.quote(QUOTE, callback)
+// exchangeRate.quote(QUOTES, callback)
