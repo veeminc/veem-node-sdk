@@ -1,20 +1,41 @@
 /* eslint-disable */
+import first from 'lodash/first'
 import VeemSDK from '../lib'
 
-const PAYMENT = {
-  amount: {
-    currency: 'USD',
-    number: 100.00,
+const PAYMENTS = [
+  {
+    batchItemId: 1,
+    amount: {
+      currency: 'USD',
+      number: 100.00,
+    },
+    payee: {
+      countryCode: 'CA',
+      email: 'bitheads2@mailinator.com',
+      firstName: 'test2',
+      lastName: 'test2',
+      type: 'Personal',
+      phone: '+1-613-555-1234',
+    },
   },
-  payee: {
-    countryCode: 'CA',
-    email: 'bitheads2@mailinator.com',
-    firstName: 'test2',
-    lastName: 'test2',
-    type: 'Personal',
-    phone: '+1-613-555-1234',
-  },
-}
+  {
+    batchItemId: 2,
+    amount: {
+      currency: 'USD',
+      number: 240.00,
+    },
+    payee: {
+      countryCode: 'CA',
+      email: 'bitheads3@mailinator.com',
+      firstName: 'test3',
+      lastName: 'test3',
+      type: 'Personal',
+      phone: '+1-613-355-1523',
+    },
+  }
+]
+
+const PAYMENT = first(PAYMENTS)
 
 const INVOICE = {
   amount: {
@@ -76,13 +97,14 @@ const {
 
 // payment.list(callback)
 // payment.get(54090, callback)
+// payment.getBatch(123, callback)
 // payment.draft(PAYMENT, callback)
 // payment.send(PAYMENT, callback)
+// payment.send(PAYMENTS, callback)
 // payment.sendById(54133, callback)
 // payment.cancel(54135, callback)
 
 // invoice.get(36909, callback)
-// invoice.getBatch(123, callback)
 // invoice.draft(INVOICE, callback)
 // invoice.send(INVOICE, callback)
 // invoice.sendById(36913, callback)
