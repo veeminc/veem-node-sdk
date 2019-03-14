@@ -3,20 +3,40 @@ import first from 'lodash/first'
 import VeemSDK from '../lib'
 import fs from 'fs'
 
-const PAYMENT = {
-  amount: {
-    currency: 'USD',
-    number: 100.00,
+const PAYMENTS = [
+  {
+    batchItemId: 1,
+    amount: {
+      currency: 'USD',
+      number: 100.00,
+    },
+    payee: {
+      countryCode: 'CA',
+      email: 'bitheads2@mailinator.com',
+      firstName: 'test2',
+      lastName: 'test2',
+      type: 'Personal',
+      phone: '+1-613-555-1234',
+    },
   },
-  payee: {
-    countryCode: 'CA',
-    email: 'bitheads2@mailinator.com',
-    firstName: 'test2',
-    lastName: 'test2',
-    type: 'Personal',
-    phone: '+1-613-555-1234',
-  },
-}
+  {
+    batchItemId: 2,
+    amount: {
+      currency: 'USD',
+      number: 240.00,
+    },
+    payee: {
+      countryCode: 'CA',
+      email: 'bitheads3@mailinator.com',
+      firstName: 'test3',
+      lastName: 'test3',
+      type: 'Personal',
+      phone: '+1-613-355-1523',
+    },
+  }
+]
+
+const PAYMENT = first(PAYMENTS)
 
 const INVOICE = {
   amount: {
@@ -114,6 +134,7 @@ const imageBuffer = fs.createReadStream(file)
 // payment.getBatch(123, callback)
 // payment.draft(PAYMENT, callback)
 // payment.send(PAYMENT, callback)
+// payment.send(PAYMENTS, callback)
 // payment.sendById(54133, callback)
 // payment.cancel(54135, callback)
 
