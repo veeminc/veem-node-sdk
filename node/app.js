@@ -1,4 +1,5 @@
 /* eslint-disable */
+import first from 'lodash/first'
 import VeemSDK from '../lib'
 import fs from 'fs'
 
@@ -32,24 +33,53 @@ const INVOICE = {
   },
 }
 
-const QUOTE = {
-  fromAmount: 100,
-  fromCurrency: 'USD',
-  recipientAccountEmail: 'test@domain.com',
-  toAmount: undefined,
-  toCountry: 'US',
-  toCurrency: 'USD',
-}
+const QUOTES = [
+  {
+    batchItemId: 1,
+    fromAmount: 100,
+    fromCurrency: 'USD',
+    recipientAccountEmail: 'test@domain.com',
+    toAmount: undefined,
+    toCountry: 'US',
+    toCurrency: 'USD',
+  },
+  {
+    batchItemId: 2,
+    fromAmount: 127,
+    fromCurrency: 'CAD',
+    recipientAccountEmail: 'test@domain.com',
+    toAmount: undefined,
+    toCountry: 'US',
+    toCurrency: 'USD',
+  }
+]
 
-const CONTACT = {
-  email: `test+contact2@domain.com`,
-  firstName: 'FName',
-  lastName: 'LName',
-  isoCountryCode: 'US',
-  phoneDialCode: '+1',
-  phoneNumber: '6132451245',
-  businessName: 'BName',
-}
+const QUOTE = first(QUOTES)
+
+const CONTACTS = [
+  {
+    batchItemId: 1,
+    email: `test+contact1@domain.com`,
+    firstName: 'FName1',
+    lastName: 'LName1',
+    isoCountryCode: 'US',
+    phoneDialCode: '+1',
+    phoneNumber: '6132451245',
+    businessName: 'BName1',
+  },
+  {
+    batchItemId: 2,
+    email: `test+contact2@domain.com`,
+    firstName: 'FName2',
+    lastName: 'LName2',
+    isoCountryCode: 'CA',
+    phoneDialCode: '+1',
+    phoneNumber: '6132451245',
+    businessName: 'BName2',
+  },
+]
+
+const CONTACT = first(CONTACTS)
 
 const callback = (error, data, response) => {
   if (error) {
@@ -69,6 +99,7 @@ const {
   customer,
   exchangeRate,
   attachment,
+  webhook,
 } = new VeemSDK({
   accessToken: '246ff312-f7ff-496f-bab2-38d132434ba7',
 })
@@ -93,10 +124,16 @@ const imageBuffer = fs.createReadStream(file)
 
 // contact.list(callback)
 // contact.get(1459, callback)
+// contact.getBatch(123, callback)
 // contact.create(CONTACT, callback)
+// contact.create(CONTACTS, callback)
 
 // customer.list('bitheads2@mailinator.com', callback)
 
 // exchangeRate.quote(QUOTE, callback)
+// exchangeRate.quote(QUOTES, callback)
 
 // attachment.upload(imageBuffer, callback)
+
+// webhook.get(1, callback)
+// webhook.list(callback)

@@ -6,7 +6,7 @@
       "alias": {
         "constants": "./lib/constants",
         "models": "./lib/models",
-        "resources": "./lib/resources",
+        "controllers": "./lib/controllers",
         "utils": "./lib/utils",
       }
     }]
