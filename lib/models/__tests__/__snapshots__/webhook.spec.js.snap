@@ -12,6 +12,7 @@ Object {
     "status": Object {
       "enum": Array [
         "Active",
+        "Inactive",
       ],
       "type": "string",
     },
