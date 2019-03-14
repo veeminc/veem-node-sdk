@@ -119,6 +119,7 @@ const {
 
 // contact.list(callback)
 // contact.get(1459, callback)
+// contact.getBatch(123, callback)
 // contact.create(CONTACT, callback)
 // contact.create(CONTACTS, callback)
 
