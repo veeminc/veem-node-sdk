@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Attachment Model should match the snapshot 1`] = `
+Object {
+  "properties": Object {
+    "name": Object {
+      "type": "string",
+    },
+    "referenceId": Object {
+      "type": "string",
+    },
+  },
+  "title": "Attachment",
+  "type": "object",
+}
+`;
