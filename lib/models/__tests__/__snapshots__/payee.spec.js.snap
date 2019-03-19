@@ -31,6 +31,6 @@ Object {
     },
   },
   "title": "Payee",
-  "type": "Object",
+  "type": "object",
 }
 `;
