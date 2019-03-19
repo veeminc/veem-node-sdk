@@ -11,6 +11,6 @@ Object {
     },
   },
   "title": "MonetaryAmount",
-  "type": "Object",
+  "type": "object",
 }
 `;

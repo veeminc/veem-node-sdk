@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BankAccount Model should match the snapshot 1`] = `
+Object {
+  "properties": Object {
+    "bankAccountNumber": Object {
+      "type": "string",
+    },
+    "bankAddress": Object {
+      "properties": Object {
+        "city": Object {
+          "type": "string",
+        },
+        "line1": Object {
+          "type": "string",
+        },
+        "line2": Object {
+          "type": "string",
+        },
+        "postalCode": Object {
+          "type": "string",
+        },
+        "stateProvince": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
+    "bankCnaps": Object {
+      "type": "string",
+    },
+    "bankCode": Object {
+      "type": "string",
+    },
+    "bankIfscBranchCode": Object {
+      "type": "string",
+    },
+    "bankInstitutionNumber": Object {
+      "type": "string",
+    },
+    "bankName": Object {
+      "type": "string",
+    },
+    "beneficiaryName": Object {
+      "type": "string",
+    },
+    "branchCode": Object {
+      "type": "string",
+    },
+    "bsbBankCode": Object {
+      "type": "string",
+    },
+    "clabe": Object {
+      "type": "string",
+    },
+    "currencyCode": Object {
+      "type": "string",
+    },
+    "iban": Object {
+      "type": "string",
+    },
+    "isoCountryCode": Object {
+      "type": "string",
+    },
+    "routingNumber": Object {
+      "type": "string",
+    },
+    "sortCode": Object {
+      "type": "string",
+    },
+    "swiftBic": Object {
+      "type": "string",
+    },
+    "transitCode": Object {
+      "type": "string",
+    },
+  },
+  "title": "BankAccount",
+  "type": "object",
+}
+`;
