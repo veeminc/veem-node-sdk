@@ -2,6 +2,7 @@
 import first from 'lodash/first'
 import VeemSDK from '../lib'
 import fs from 'fs'
+import opn from 'opn'
 
 const PAYMENTS = [
   {
@@ -107,7 +108,16 @@ const callback = (error, data, response) => {
     console.warn(response.request)
   } else {
     console.log('API called successfully.')
-    console.log(JSON.parse(data, null, 2))
+    console.log(data)
+  }
+}
+
+const saveFileAndOpen = (filename) => {
+  return (data) => {
+    const filepath = `${__dirname}/assets/${filename}`
+
+    fs.writeFileSync(filepath, data)
+    opn(filepath)
   }
 }
 
@@ -161,7 +171,7 @@ const attachmentModel = {
 // exchangeRate.quote(QUOTES, callback)
 
 // attachment.upload(imageBuffer, callback)
-// attachment.download(attachmentModel, callback)
+attachment.download(attachmentModel).then(saveFileAndOpen(attachmentModel.name))
 
 // webhook.get(1, callback)
 // webhook.list(callback)
