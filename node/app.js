@@ -108,7 +108,7 @@ const callback = (error, data, response) => {
     console.warn(response.request)
   } else {
     console.log('API called successfully.')
-    console.log(data)
+    console.log(JSON.parse(data, null, 2))
   }
 }
 
