@@ -171,7 +171,7 @@ const attachmentModel = {
 // exchangeRate.quote(QUOTES, callback)
 
 // attachment.upload(imageBuffer, callback)
-attachment.download(attachmentModel).then(saveFileAndOpen(attachmentModel.name))
+// attachment.download(attachmentModel).then(saveFileAndOpen(attachmentModel.name))
 
 // webhook.get(1, callback)
 // webhook.list(callback)
