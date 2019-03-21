@@ -3,6 +3,7 @@ import first from 'lodash/first'
 import assign from 'lodash/assign'
 import VeemSDK from '../lib'
 import fs from 'fs'
+import opn from 'opn'
 
 const file = __dirname+'/image.png'
 const imageBuffer = fs.createReadStream(file)
@@ -48,6 +49,11 @@ const ATTACHMENTS = [
   imageBuffer,
   imageBuffer,
 ]
+
+const ATTACHMENT_RESPONSE = {
+  name: 'image.png',
+  referenceId: '42b62c7d-3dac-4622-a307-8927b7e5d06e',
+}
 
 const PAYMENT_WITH_ATTACHMENTS = assign({}, PAYMENT, { attachments: ATTACHMENTS })
 
@@ -124,6 +130,15 @@ const callback = (error, data, response) => {
   }
 }
 
+const saveFileAndOpen = (filename) => {
+  return (data) => {
+    const filepath = `${__dirname}/assets/${filename}`
+
+    fs.writeFileSync(filepath, data)
+    opn(filepath)
+  }
+}
+
 const {
   metadata,
   payment,
@@ -168,6 +183,7 @@ payment.draft(PAYMENT_WITH_ATTACHMENTS, callback)
 // exchangeRate.quote(QUOTES, callback)
 
 // attachment.upload(imageBuffer, callback)
+// attachment.download(ATTACHMENT_RESPONSE).then(saveFileAndOpen(ATTACHMENT_RESPONSE.name))
 
 // webhook.get(1, callback)
 // webhook.list(callback)
