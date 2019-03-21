@@ -139,6 +139,15 @@ const saveFileAndOpen = (filename) => {
   }
 }
 
+const saveFileAndOpen = (filename) => {
+  return (data) => {
+    const filepath = `${__dirname}/assets/${filename}`
+
+    fs.writeFileSync(filepath, data)
+    opn(filepath)
+  }
+}
+
 const {
   metadata,
   payment,
