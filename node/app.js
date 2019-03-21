@@ -1,23 +1,31 @@
 /* eslint-disable */
 import first from 'lodash/first'
+import assign from 'lodash/assign'
 import VeemSDK from '../lib'
 import fs from 'fs'
+
+const file = __dirname+'/image.png'
+const imageBuffer = fs.createReadStream(file)
+
+const PAYMENT = {
+  amount: {
+    currency: 'USD',
+    number: 100.00,
+  },
+  payee: {
+    countryCode: 'CA',
+    email: 'bitheads2@mailinator.com',
+    firstName: 'test2',
+    lastName: 'test2',
+    type: 'Personal',
+    phone: '+1-613-555-1234',
+  },
+}
 
 const PAYMENTS = [
   {
     batchItemId: 1,
-    amount: {
-      currency: 'USD',
-      number: 100.00,
-    },
-    payee: {
-      countryCode: 'CA',
-      email: 'bitheads2@mailinator.com',
-      firstName: 'test2',
-      lastName: 'test2',
-      type: 'Personal',
-      phone: '+1-613-555-1234',
-    },
+    ...PAYMENT,
   },
   {
     batchItemId: 2,
@@ -36,7 +44,12 @@ const PAYMENTS = [
   }
 ]
 
-const PAYMENT = first(PAYMENTS)
+const ATTACHMENTS = [
+  imageBuffer,
+  imageBuffer,
+]
+
+const PAYMENT_WITH_ATTACHMENTS = assign({}, PAYMENT, { attachments: ATTACHMENTS })
 
 const INVOICE = {
   amount: {
@@ -124,15 +137,13 @@ const {
   accessToken: '246ff312-f7ff-496f-bab2-38d132434ba7',
 })
 
-const file = __dirname+'/image.png'
-const imageBuffer = fs.createReadStream(file)
-
 // metadata.getCountryCurrencyMap(callback)
 
 // payment.list(callback)
 // payment.get(54090, callback)
 // payment.getBatch(123, callback)
 // payment.draft(PAYMENT, callback)
+payment.draft(PAYMENT_WITH_ATTACHMENTS, callback)
 // payment.draft(PAYMENTS, callback)
 // payment.send(PAYMENT, callback)
 // payment.send(PAYMENTS, callback)
