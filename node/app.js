@@ -5,7 +5,7 @@ import VeemSDK from '../lib'
 import fs from 'fs'
 import opn from 'opn'
 
-const file = __dirname+'/image.png'
+const file = `${__dirname}/image.png`
 const imageBuffer = fs.createReadStream(file)
 
 const PAYMENT = {
@@ -158,7 +158,7 @@ const {
 // payment.get(54090, callback)
 // payment.getBatch(123, callback)
 // payment.draft(PAYMENT, callback)
-payment.draft(PAYMENT_WITH_ATTACHMENTS, callback)
+// payment.draft(PAYMENT_WITH_ATTACHMENTS, callback)
 // payment.draft(PAYMENTS, callback)
 // payment.send(PAYMENT, callback)
 // payment.send(PAYMENTS, callback)
