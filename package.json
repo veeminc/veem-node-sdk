@@ -14,6 +14,7 @@
     "build": "babel lib -d dist --ignore '**/__tests__'"
   },
   "dependencies": {
+    "bluebird": "^3.5.3",
     "lodash": "^4.17.11",
     "querystring": "^0.2.0",
     "superagent": "^4.1.0",

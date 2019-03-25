@@ -1,24 +1,32 @@
 /* eslint-disable */
 import first from 'lodash/first'
+import assign from 'lodash/assign'
 import VeemSDK from '../lib'
 import fs from 'fs'
 import opn from 'opn'
 
+const file = `${__dirname}/image.png`
+const imageBuffer = fs.createReadStream(file)
+
+const PAYMENT = {
+  amount: {
+    currency: 'USD',
+    number: 100.00,
+  },
+  payee: {
+    countryCode: 'CA',
+    email: 'bitheads2@mailinator.com',
+    firstName: 'test2',
+    lastName: 'test2',
+    type: 'Personal',
+    phone: '+1-613-555-1234',
+  },
+}
+
 const PAYMENTS = [
   {
     batchItemId: 1,
-    amount: {
-      currency: 'USD',
-      number: 100.00,
-    },
-    payee: {
-      countryCode: 'CA',
-      email: 'bitheads2@mailinator.com',
-      firstName: 'test2',
-      lastName: 'test2',
-      type: 'Personal',
-      phone: '+1-613-555-1234',
-    },
+    ...PAYMENT,
   },
   {
     batchItemId: 2,
@@ -37,7 +45,17 @@ const PAYMENTS = [
   }
 ]
 
-const PAYMENT = first(PAYMENTS)
+const ATTACHMENTS = [
+  imageBuffer,
+  imageBuffer,
+]
+
+const ATTACHMENT_RESPONSE = {
+  name: 'image.png',
+  referenceId: '42b62c7d-3dac-4622-a307-8927b7e5d06e',
+}
+
+const PAYMENT_WITH_ATTACHMENTS = assign({}, PAYMENT, { attachments: ATTACHMENTS })
 
 const INVOICE = {
   amount: {
@@ -108,7 +126,16 @@ const callback = (error, data, response) => {
     console.warn(response.request)
   } else {
     console.log('API called successfully.')
-    console.log(JSON.parse(data, null, 2))
+    console.log(data)
+  }
+}
+
+const saveFileAndOpen = (filename) => {
+  return (data) => {
+    const filepath = `${__dirname}/assets/${filename}`
+
+    fs.writeFileSync(filepath, data)
+    opn(filepath)
   }
 }
 
@@ -134,19 +161,13 @@ const {
   accessToken: '246ff312-f7ff-496f-bab2-38d132434ba7',
 })
 
-const file = __dirname+'/image.png'
-const imageBuffer = fs.createReadStream(file)
-
-const attachmentModel = {
-  name: 'image.png',
-  referenceId: '42b62c7d-3dac-4622-a307-8927b7e5d06e',
-}
 // metadata.getCountryCurrencyMap(callback)
 
 // payment.list(callback)
 // payment.get(54090, callback)
 // payment.getBatch(123, callback)
 // payment.draft(PAYMENT, callback)
+// payment.draft(PAYMENT_WITH_ATTACHMENTS, callback)
 // payment.draft(PAYMENTS, callback)
 // payment.send(PAYMENT, callback)
 // payment.send(PAYMENTS, callback)
@@ -171,7 +192,7 @@ const attachmentModel = {
 // exchangeRate.quote(QUOTES, callback)
 
 // attachment.upload(imageBuffer, callback)
-// attachment.download(attachmentModel).then(saveFileAndOpen(attachmentModel.name))
+// attachment.download(ATTACHMENT_RESPONSE).then(saveFileAndOpen(ATTACHMENT_RESPONSE.name))
 
 // webhook.get(1, callback)
 // webhook.list(callback)
