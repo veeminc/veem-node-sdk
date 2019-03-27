@@ -72,6 +72,8 @@ const INVOICE = {
   },
 }
 
+const INVOICE_WITH_ATTACHMENTS = assign({}, INVOICE, { attachments: ATTACHMENTS })
+
 const QUOTES = [
   {
     batchItemId: 1,
@@ -139,15 +141,6 @@ const saveFileAndOpen = (filename) => {
   }
 }
 
-const saveFileAndOpen = (filename) => {
-  return (data) => {
-    const filepath = `${__dirname}/assets/${filename}`
-
-    fs.writeFileSync(filepath, data)
-    opn(filepath)
-  }
-}
-
 const {
   metadata,
   payment,
@@ -176,6 +169,7 @@ const {
 
 // invoice.get(36909, callback)
 // invoice.draft(INVOICE, callback)
+// invoice.draft(INVOICE_WITH_ATTACHMENTS, callback)
 // invoice.send(INVOICE, callback)
 // invoice.sendById(36913, callback)
 // invoice.cancel(36913, callback)
