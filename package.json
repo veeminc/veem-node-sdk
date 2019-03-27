@@ -11,7 +11,6 @@
   "scripts": {
     "test": "jest -- ./lib",
     "test:e2e": "jest -- ./e2e",
-    "test:plugins": "jest -- ./jest/plugins",
     "start": "nodemon --exec babel-node node/app.js",
     "build": "babel lib -d dist --ignore '**/__tests__'"
   },
