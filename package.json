@@ -9,11 +9,13 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest -- ./lib",
+    "test:e2e": "jest -- ./e2e",
     "start": "nodemon --exec babel-node node/app.js",
     "build": "babel lib -d dist --ignore '**/__tests__'"
   },
   "dependencies": {
+    "JSV": "^4.0.2",
     "bluebird": "^3.5.3",
     "lodash": "^4.17.11",
     "querystring": "^0.2.0",
@@ -48,7 +50,8 @@
     "nodemon": "^1.18.10",
     "opn": "^5.5.0",
     "sinon": "^7.2.5",
-    "sinon-chai": "^3.3.0"
+    "sinon-chai": "^3.3.0",
+    "superstruct": "^0.6.1"
   },
   "lint-staged": {
     "*.js": "eslint"
