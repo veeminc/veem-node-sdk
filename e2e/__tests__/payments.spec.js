@@ -1,5 +1,5 @@
 import CONFIG from '../config'
-import VeemSDK from '../../lib'
+import VeemSDK from 'VeemSDK'
 
 const PAYMENT = {
   amount: {
