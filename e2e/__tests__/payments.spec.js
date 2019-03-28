@@ -1,4 +1,4 @@
-import CONFIG from '../config.json'
+import CONFIG from '../config'
 import VeemSDK from 'VeemSDK'
 
 const PAYMENT = {
