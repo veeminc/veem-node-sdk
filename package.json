@@ -11,10 +11,12 @@
   "scripts": {
     "test": "jest -- ./lib",
     "test:e2e": "jest -- ./e2e",
+    "test:plugins": "jest -- ./jest/plugins",
     "start": "nodemon --exec babel-node node/app.js",
     "build": "babel lib -d dist --ignore '**/__tests__'"
   },
   "dependencies": {
+    "JSV": "^4.0.2",
     "bluebird": "^3.5.3",
     "lodash": "^4.17.11",
     "querystring": "^0.2.0",
