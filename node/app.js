@@ -156,7 +156,7 @@ const {
 
 // metadata.getCountryCurrencyMap(callback)
 
-// payment.list(callback)
+// payment.list(null, callback)
 // payment.get(54090, callback)
 // payment.getBatch(123, callback)
 // payment.draft(PAYMENT, callback)
