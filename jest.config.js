@@ -6,6 +6,9 @@ module.exports = {
   coverageDirectory: '_coverage',
   moduleDirectories: ['lib', 'node_modules'],
   moduleFileExtensions: ['js', 'json'],
+  moduleNameMapper: {
+    'VeemSDK': '<rootDir>/lib',
+  },
   setupFilesAfterEnv: [
     '<rootDir>/jest/setup-test-framework-script.js',
     '<rootDir>/jest/setup-chai-plugins.js',
