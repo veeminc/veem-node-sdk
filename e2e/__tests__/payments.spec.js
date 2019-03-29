@@ -29,14 +29,8 @@ const PAYMENTS = [
   },
 ]
 
-const {
-  accessToken,
-} = CONFIG
-
 describe('Payment', () => {
-  const veemSDK = new VeemSDK({
-    accessToken,
-  })
+  const veemSDK = new VeemSDK(CONFIG)
 
   describe('payment.list', () => {
     let responseBody
