@@ -1,6 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Contact Model should match the snapshot 1`] = `
+exports[`Contact Model request should match the snapshot 1`] = `
+Object {
+  "properties": Object {
+    "batchItemId": Object {
+      "type": "number",
+    },
+    "businessName": Object {
+      "type": "string",
+    },
+    "contactAccountId": Object {
+      "type": "number",
+    },
+    "dialCode": Object {
+      "type": "string",
+    },
+    "email": Object {
+      "type": "string",
+    },
+    "firstName": Object {
+      "type": "string",
+    },
+    "id": Object {
+      "type": "number",
+    },
+    "isoCountryCode": Object {
+      "type": "string",
+    },
+    "lastName": Object {
+      "type": "string",
+    },
+    "phoneNumber": Object {
+      "type": "string",
+    },
+  },
+  "title": "ContactRequest",
+  "type": "object",
+}
+`;
+
+exports[`Contact Model response should match the snapshot 1`] = `
 Object {
   "properties": Object {
     "bankAccount": Object {
@@ -106,7 +145,7 @@ Object {
       "type": "string",
     },
     "externalBusinessId": Object {
-      "type": "number",
+      "type": "string",
     },
     "firstName": Object {
       "type": "string",
@@ -120,16 +159,14 @@ Object {
     "phoneDialCode": Object {
       "type": "string",
     },
+    "phoneNumber": Object {
+      "type": "string",
+    },
     "type": Object {
-      "enum": Array [
-        "Incomplete",
-        "Business",
-        "Personal",
-      ],
       "type": "string",
     },
   },
-  "title": "Contact",
+  "title": "ContactResponse",
   "type": "object",
 }
 `;
