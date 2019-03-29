@@ -162,7 +162,7 @@ const {
 // payment.draft(PAYMENT, callback)
 // payment.draft(PAYMENT_WITH_ATTACHMENTS, callback)
 // payment.draft(PAYMENTS, callback)
-payment.send(PAYMENT, callback)
+// payment.send(PAYMENT, callback)
 // payment.send(PAYMENTS, callback)
 // payment.sendById(54133, callback)
 // payment.cancel(54135, callback)
