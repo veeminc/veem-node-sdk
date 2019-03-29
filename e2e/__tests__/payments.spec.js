@@ -1,5 +1,7 @@
 import CONFIG from '../config'
 import VeemSDK from 'VeemSDK'
+import Payment from 'models/payment'
+import every from 'lodash/every'
 
 const PAYMENT = {
   amount: {
@@ -46,6 +48,12 @@ describe('Payment', () => {
     it('should return a pagedResponseBody', async () => {
       expect(responseBody).to.be.a.pagedResponseBody()
     })
+
+    it('should return a list of Payment models', () => {
+      const isEveryResourcePaymentModel = every(responseBody.content, resource => Payment.response.validate(resource))
+
+      expect(isEveryResourcePaymentModel).to.be.true
+    })
   })
 
   describe('payment.send', () => {
@@ -58,6 +66,16 @@ describe('Payment', () => {
     it('should not return a pagedResponseBody', () => {
       expect(responseBody).to.not.be.a.pagedResponseBody()
     })
+
+    it('should return a Payment model', () => {
+      const isPaymentResponseModelValid = Payment.response.validate(responseBody)
+
+      expect(isPaymentResponseModelValid).to.be.true
+    })
+
+    it('should set the `status` to `Sent`', () => {
+      expect(responseBody).to.have.property('status', 'Sent')
+    })
   })
 
   describe('payment.draft', () => {
@@ -69,6 +87,16 @@ describe('Payment', () => {
 
     it('should not return a pagedResponseBody', () => {
       expect(responseBody).to.not.be.a.pagedResponseBody()
+    })
+
+    it('should return a Payment model', () => {
+      const isPaymentResponseModelValid = Payment.response.validate(responseBody)
+
+      expect(isPaymentResponseModelValid).to.be.true
+    })
+
+    it('should set the `status` to `Drafted`', () => {
+      expect(responseBody).to.have.property('status', 'Drafted')
     })
   })
 
@@ -83,6 +111,16 @@ describe('Payment', () => {
     it('should not return a pagedResponseBody', () => {
       expect(responseBody).to.not.be.a.pagedResponseBody()
     })
+
+    it('should return a Payment model', () => {
+      const isPaymentResponseModelValid = Payment.response.validate(responseBody)
+
+      expect(isPaymentResponseModelValid).to.be.true
+    })
+
+    it('should set the `status` to `Sent`', () => {
+      expect(responseBody).to.have.property('status', 'Sent')
+    })
   })
 
   describe('payment.get', () => {
@@ -96,6 +134,12 @@ describe('Payment', () => {
     it('should not return a pagedResponseBody', () => {
       expect(responseBody).to.not.be.a.pagedResponseBody()
     })
+
+    it('should return a Payment model', () => {
+      const isPaymentResponseModelValid = Payment.response.validate(responseBody)
+
+      expect(isPaymentResponseModelValid).to.be.true
+    })
   })
 
   describe('payment.cancel', () => {
@@ -108,6 +152,16 @@ describe('Payment', () => {
 
     it('should not return a pagedResponseBody', () => {
       expect(responseBody).to.not.be.a.pagedResponseBody()
+    })
+
+    it('should return a Payment model', () => {
+      const isPaymentResponseModelValid = Payment.response.validate(responseBody)
+
+      expect(isPaymentResponseModelValid).to.be.true
+    })
+
+    it('should set the `status` to `Cancelled`', () => {
+      expect(responseBody).to.have.property('status', 'Cancelled')
     })
   })
 
