@@ -42,26 +42,20 @@ Object {
     },
     "exchangeRate": Object {
       "properties": Object {
-        "expiry": Object {
-          "type": "string",
-        },
         "fromAmount": Object {
-          "type": "number",
+          "type": "string",
         },
         "fromCurrency": Object {
           "type": "string",
         },
-        "id": Object {
-          "type": "number",
-        },
-        "rate": Object {
-          "type": "number",
-        },
-        "timeCreated": Object {
+        "recipientAccountEmail": Object {
           "type": "string",
         },
         "toAmount": Object {
-          "type": "number",
+          "type": "string",
+        },
+        "toCountry": Object {
+          "type": "string",
         },
         "toCurrency": Object {
           "type": "string",
@@ -158,14 +152,7 @@ Object {
       "type": "object",
     },
     "attachments": Object {
-      "properties": Object {
-        "name": Object {
-          "type": "string",
-        },
-        "referenceId": Object {
-          "type": "string",
-        },
-      },
+      "properties": Object {},
       "type": "object",
     },
     "batchItemId": Object {
@@ -198,7 +185,7 @@ Object {
           "type": "string",
         },
         "id": Object {
-          "type": "number",
+          "type": "string",
         },
         "rate": Object {
           "type": "number",

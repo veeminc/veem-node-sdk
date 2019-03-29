@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Invoice Model should match the snapshot 1`] = `
+exports[`Invoice Model request should match the snapshot 1`] = `
 Object {
   "properties": Object {
     "amount": Object {
@@ -14,8 +14,16 @@ Object {
       },
       "type": "object",
     },
-    "approveAutomatically": Object {
-      "type": "boolean",
+    "attachments": Object {
+      "properties": Object {
+        "name": Object {
+          "type": "string",
+        },
+        "referenceId": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
     },
     "ccEmails": Object {
       "items": Object {
@@ -23,8 +31,34 @@ Object {
       },
       "type": "array",
     },
+    "clientId": Object {
+      "type": "string",
+    },
     "dueDate": Object {
       "type": "string",
+    },
+    "exchangeRate": Object {
+      "properties": Object {
+        "fromAmount": Object {
+          "type": "string",
+        },
+        "fromCurrency": Object {
+          "type": "string",
+        },
+        "recipientAccountEmail": Object {
+          "type": "string",
+        },
+        "toAmount": Object {
+          "type": "string",
+        },
+        "toCountry": Object {
+          "type": "string",
+        },
+        "toCurrency": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
     },
     "exchangeRateQuoteId": Object {
       "type": "string",
@@ -67,16 +101,130 @@ Object {
       "type": "object",
     },
     "purposeOfPayment": Object {
-      "enum": Array [
-        "Goods",
-        "Services",
-        "Charitable",
-        "Other",
-      ],
       "type": "string",
     },
   },
-  "title": "Invoice",
+  "title": "InvoiceRequest",
+  "type": "object",
+}
+`;
+
+exports[`Invoice Model response should match the snapshot 1`] = `
+Object {
+  "properties": Object {
+    "amount": Object {
+      "properties": Object {
+        "amount": Object {
+          "type": "number",
+        },
+        "currency": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
+    "attachments": Object {
+      "properties": Object {},
+      "type": "object",
+    },
+    "ccEmails": Object {
+      "items": Object {
+        "type": "string",
+      },
+      "type": "array",
+    },
+    "claimLink": Object {
+      "type": "string",
+    },
+    "clientId": Object {
+      "type": "string",
+    },
+    "dueDate": Object {
+      "type": "string",
+    },
+    "exchangeRate": Object {
+      "properties": Object {
+        "expiry": Object {
+          "type": "string",
+        },
+        "fromAmount": Object {
+          "type": "number",
+        },
+        "fromCurrency": Object {
+          "type": "string",
+        },
+        "id": Object {
+          "type": "string",
+        },
+        "rate": Object {
+          "type": "number",
+        },
+        "timeCreated": Object {
+          "type": "string",
+        },
+        "toAmount": Object {
+          "type": "number",
+        },
+        "toCurrency": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
+    "exchangeRateQuoteId": Object {
+      "type": "string",
+    },
+    "externalInvoiceRefId": Object {
+      "type": "string",
+    },
+    "id": Object {
+      "type": "number",
+    },
+    "notes": Object {
+      "type": "string",
+    },
+    "payer": Object {
+      "properties": Object {
+        "businessName": Object {
+          "type": "string",
+        },
+        "countryCode": Object {
+          "type": "string",
+        },
+        "email": Object {
+          "type": "string",
+        },
+        "firstName": Object {
+          "type": "string",
+        },
+        "lastName": Object {
+          "type": "string",
+        },
+        "phone": Object {
+          "type": "string",
+        },
+        "type": Object {
+          "enum": Array [
+            "Incomplete",
+            "Business",
+            "Personal",
+          ],
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
+    "purposeOfPayment": Object {
+      "type": "string",
+    },
+    "status": Object {
+      "type": "string",
+    },
+    "timeCreated": Object {
+      "type": "string",
+    },
+  },
+  "title": "InvoiceResponse",
   "type": "object",
 }
 `;

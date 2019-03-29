@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Attachment Model should match the snapshot 1`] = `
+exports[`Attachment Model request should match the snapshot 1`] = `
 Object {
   "properties": Object {
     "name": Object {
@@ -10,7 +10,15 @@ Object {
       "type": "string",
     },
   },
-  "title": "Attachment",
+  "title": "AttachmentRequest",
+  "type": "object",
+}
+`;
+
+exports[`Attachment Model response should match the snapshot 1`] = `
+Object {
+  "properties": Object {},
+  "title": "AttachmentResponse",
   "type": "object",
 }
 `;

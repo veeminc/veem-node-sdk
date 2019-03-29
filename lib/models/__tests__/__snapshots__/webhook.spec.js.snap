@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Webhook Model should match the snapshot 1`] = `
+exports[`Webhook Model request should match the snapshot 1`] = `
 Object {
   "properties": Object {
     "callbackUrl": Object {
@@ -9,15 +9,29 @@ Object {
     "event": Object {
       "type": "string",
     },
+  },
+  "title": "WebhookRequest",
+  "type": "object",
+}
+`;
+
+exports[`Webhook Model response should match the snapshot 1`] = `
+Object {
+  "properties": Object {
+    "callbackUrl": Object {
+      "type": "string",
+    },
+    "event": Object {
+      "type": "string",
+    },
+    "id": Object {
+      "type": "number",
+    },
     "status": Object {
-      "enum": Array [
-        "Active",
-        "Inactive",
-      ],
       "type": "string",
     },
   },
-  "title": "Webhook",
+  "title": "WebhookResponse",
   "type": "object",
 }
 `;

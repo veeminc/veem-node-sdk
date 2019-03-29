@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExchangeRate Model request should match the snapshot 1`] = `
+Object {
+  "properties": Object {
+    "fromAmount": Object {
+      "type": "string",
+    },
+    "fromCurrency": Object {
+      "type": "string",
+    },
+    "recipientAccountEmail": Object {
+      "type": "string",
+    },
+    "toAmount": Object {
+      "type": "string",
+    },
+    "toCountry": Object {
+      "type": "string",
+    },
+    "toCurrency": Object {
+      "type": "string",
+    },
+  },
+  "title": "ContactRequest",
+  "type": "object",
+}
+`;
+
+exports[`ExchangeRate Model response should match the snapshot 1`] = `
+Object {
+  "properties": Object {
+    "expiry": Object {
+      "type": "string",
+    },
+    "fromAmount": Object {
+      "type": "number",
+    },
+    "fromCurrency": Object {
+      "type": "string",
+    },
+    "id": Object {
+      "type": "string",
+    },
+    "rate": Object {
+      "type": "number",
+    },
+    "timeCreated": Object {
+      "type": "string",
+    },
+    "toAmount": Object {
+      "type": "number",
+    },
+    "toCurrency": Object {
+      "type": "string",
+    },
+  },
+  "title": "ExchangeRateResponse",
+  "type": "object",
+}
+`;
