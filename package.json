@@ -17,7 +17,6 @@
     "build": "babel lib -d dist --ignore '**/__tests__'"
   },
   "dependencies": {
-    "JSV": "^4.0.2",
     "bluebird": "^3.5.3",
     "lodash": "^4.17.11",
     "querystring": "^0.2.0",
@@ -33,10 +32,12 @@
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-stage-0": "^7.0.0",
     "@babel/runtime": "^7.3.4",
+    "JSV": "^4.0.2",
     "babel-jest": "^24.1.0",
     "babel-plugin-module-resolver": "^3.2.0",
     "chai": "^4.2.0",
     "chai-jest-diff": "^1.0.2",
+    "chai-json-schema": "^1.5.0",
     "chai-json-schema-ajv": "^4.0.0",
     "chai-nock": "^1.1.0",
     "eslint-config-standard": "^12.0.0",

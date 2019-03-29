@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Payment Model should match the snapshot 1`] = `
+exports[`Payment Model request should match the snapshot 1`] = `
 Object {
   "properties": Object {
     "amount": Object {
@@ -17,14 +17,57 @@ Object {
     "approveAutomatically": Object {
       "type": "boolean",
     },
+    "attachments": Object {
+      "properties": Object {
+        "name": Object {
+          "type": "string",
+        },
+        "referenceId": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
     "ccEmails": Object {
       "items": Object {
         "type": "string",
       },
       "type": "array",
     },
+    "clientId": Object {
+      "type": "string",
+    },
     "dueDate": Object {
       "type": "string",
+    },
+    "exchangeRate": Object {
+      "properties": Object {
+        "expiry": Object {
+          "type": "string",
+        },
+        "fromAmount": Object {
+          "type": "number",
+        },
+        "fromCurrency": Object {
+          "type": "string",
+        },
+        "id": Object {
+          "type": "number",
+        },
+        "rate": Object {
+          "type": "number",
+        },
+        "timeCreated": Object {
+          "type": "string",
+        },
+        "toAmount": Object {
+          "type": "number",
+        },
+        "toCurrency": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
     },
     "exchangeRateQuoteId": Object {
       "type": "string",
@@ -66,17 +109,248 @@ Object {
       },
       "type": "object",
     },
+    "payeeAmount": Object {
+      "properties": Object {
+        "amount": Object {
+          "type": "number",
+        },
+        "currency": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
+    "paymentAction": Object {
+      "type": "string",
+    },
+    "paymentApprovalRequest": Object {
+      "accountId": Object {
+        "type": "number",
+      },
+      "userId": Object {
+        "type": "number",
+      },
+    },
     "purposeOfPayment": Object {
-      "enum": Array [
-        "Goods",
-        "Services",
-        "Charitable",
-        "Other",
-      ],
+      "type": "string",
+    },
+    "status": Object {
       "type": "string",
     },
   },
-  "title": "Payment",
+  "title": "PaymentRequest",
+  "type": "object",
+}
+`;
+
+exports[`Payment Model response should match the snapshot 1`] = `
+Object {
+  "properties": Object {
+    "amount": Object {
+      "properties": Object {
+        "amount": Object {
+          "type": "number",
+        },
+        "currency": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
+    "attachments": Object {
+      "properties": Object {
+        "name": Object {
+          "type": "string",
+        },
+        "referenceId": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
+    "batchItemId": Object {
+      "type": "number",
+    },
+    "ccEmails": Object {
+      "items": Object {
+        "type": "string",
+      },
+      "type": "array",
+    },
+    "claimLink": Object {
+      "type": "string",
+    },
+    "clientId": Object {
+      "type": "string",
+    },
+    "dueDate": Object {
+      "type": "string",
+    },
+    "exchangeRate": Object {
+      "properties": Object {
+        "expiry": Object {
+          "type": "string",
+        },
+        "fromAmount": Object {
+          "type": "number",
+        },
+        "fromCurrency": Object {
+          "type": "string",
+        },
+        "id": Object {
+          "type": "number",
+        },
+        "rate": Object {
+          "type": "number",
+        },
+        "timeCreated": Object {
+          "type": "string",
+        },
+        "toAmount": Object {
+          "type": "number",
+        },
+        "toCurrency": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
+    "exchangeRateQuoteId": Object {
+      "type": "string",
+    },
+    "externalInvoiceRefId": Object {
+      "type": "string",
+    },
+    "id": Object {
+      "type": "number",
+    },
+    "notes": Object {
+      "type": "string",
+    },
+    "payee": Object {
+      "properties": Object {
+        "businessName": Object {
+          "type": "string",
+        },
+        "countryCode": Object {
+          "type": "string",
+        },
+        "email": Object {
+          "type": "string",
+        },
+        "firstName": Object {
+          "type": "string",
+        },
+        "lastName": Object {
+          "type": "string",
+        },
+        "phone": Object {
+          "type": "string",
+        },
+        "type": Object {
+          "enum": Array [
+            "Incomplete",
+            "Business",
+            "Personal",
+          ],
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
+    "payeeAmount": Object {
+      "properties": Object {
+        "amount": Object {
+          "type": "number",
+        },
+        "currency": Object {
+          "type": "string",
+        },
+      },
+      "type": "object",
+    },
+    "paymentAction": Object {
+      "type": "string",
+    },
+    "paymentApproval": Object {
+      "properties": Object {
+        "approvalStatus": Object {
+          "type": "string",
+        },
+        "approverNumber": Object {
+          "type": "number",
+        },
+        "approverNumberRequired": Object {
+          "type": "number",
+        },
+        "userApprovalList": Object {
+          "items": Object {
+            "properties": Object {
+              "approvalStatus": Object {
+                "type": "string",
+              },
+              "email": Object {
+                "type": "string",
+              },
+              "firstName": Object {
+                "type": "string",
+              },
+              "lastName": Object {
+                "type": "string",
+              },
+              "middleName": Object {
+                "type": "string",
+              },
+            },
+            "type": "object",
+          },
+          "type": "array",
+        },
+      },
+      "type": "object",
+    },
+    "paymentApprovalRequest": Object {
+      "accountId": Object {
+        "type": "number",
+      },
+      "userId": Object {
+        "type": "number",
+      },
+    },
+    "purposeOfPayment": Object {
+      "type": "string",
+    },
+    "pushPaymentInfo": Object {
+      "amount": Object {
+        "properties": Object {
+          "amount": Object {
+            "type": "number",
+          },
+          "currency": Object {
+            "type": "string",
+          },
+        },
+        "type": "obect",
+      },
+      "pushPaymentInfo": Object {
+        "reference": "string",
+        "type": "string",
+      },
+    },
+    "requestId": Object {
+      "type": "string",
+    },
+    "status": Object {
+      "type": "string",
+    },
+    "timeCreated": Object {
+      "type": "string",
+    },
+    "timeUpdated": Object {
+      "type": "string",
+    },
+  },
+  "title": "PaymentResponse",
   "type": "object",
 }
 `;

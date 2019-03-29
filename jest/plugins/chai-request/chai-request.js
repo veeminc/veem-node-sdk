@@ -21,9 +21,9 @@ const BatchResponseBodyTemplate = struct({
   batchItems: 'array',
 })
 
-const isPagedResponseBody = (reponseBody) => {
+const isPagedResponseBody = (responseBody) => {
   try {
-    PagedResponseBodyTemplate(reponseBody)
+    PagedResponseBodyTemplate(responseBody)
   } catch (e) {
     return false
   }
