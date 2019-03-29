@@ -1,7 +1,7 @@
 # Payment Controller
 
 Method | HTTP request
-------------- | ------------- | -------------
+------------- | -------------
 [**get**](payment.md#get) | **GET** /veem/v1.1/payments/{payment_id}
 [**list**](payment.md#list) | **GET** /veem/v1.1/payments
 [**getBatch**](payment.md#getBatch) | **GET** /veem/v1.1/payments/batch/{batch_id}
