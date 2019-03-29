@@ -10,6 +10,9 @@
     "beforeAll": true,
     "afterAll": true
   },
+  "plugins": [
+    "markdown"
+  ],
   "rules": {
     "comma-dangle": [
       2,
