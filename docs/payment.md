@@ -27,7 +27,7 @@ var sdk = new VeemSDK({ accessToken: <access_token> })
 
 sdk.payment.get(<payment_id>)
   .then(responseBody => console.log(responseBody))
-  .catch(error => console.log(error))
+  .catch(error => console.error(error))
 ```
 
 ## list
@@ -50,7 +50,7 @@ var options = {
 
 sdk.payment.list(options)
   .then(responseBody => console.log(responseBody))
-  .catch(error => console.log(error))
+  .catch(error => console.error(error))
 ```
 
 ## getBatch
@@ -68,7 +68,7 @@ var sdk = new VeemSDK({ accessToken: <access_token> })
 
 sdk.payment.getBatch(<batch_id>)
   .then(responseBody => console.log(responseBody))
-  .catch(error => console.log(error))
+  .catch(error => console.error(error))
 ```
 
 ## send
@@ -87,7 +87,7 @@ var sdk = new VeemSDK({ accessToken: <access_token> })
 
 sdk.payment.send(payload)
   .then(responseBody => console.log(responseBody))
-  .catch(error => console.log(error))
+  .catch(error => console.error(error))
 ```
 
 ## sendById
@@ -105,7 +105,7 @@ var sdk = new VeemSDK({ accessToken: <access_token> })
 
 sdk.payment.sendById(<payment_id>)
   .then(responseBody => console.log(responseBody))
-  .catch(error => console.log(error))
+  .catch(error => console.error(error))
 ```
 
 ## draft
@@ -124,7 +124,7 @@ var sdk = new VeemSDK({ accessToken: <access_token> })
 
 sdk.payment.draft(payload)
   .then(responseBody => console.log(responseBody))
-  .catch(error => console.log(error))
+  .catch(error => console.error(error))
 ```
 
 ## cancel
@@ -142,5 +142,5 @@ var sdk = new VeemSDK({ accessToken: <access_token> })
 
 sdk.payment.cancel(<payment_id>)
   .then(responseBody => console.log(responseBody))
-  .catch(error => console.log(error))
+  .catch(error => console.error(error))
 ```
