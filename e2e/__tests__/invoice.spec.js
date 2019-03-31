@@ -1,6 +1,6 @@
 import CONFIG from '../config'
 import VeemSDK from 'VeemSDK'
-import invoice from 'models/invoice'
+import Invoice from 'models/invoice'
 
 const INVOICE = {
   amount: {
@@ -32,7 +32,7 @@ describe('invoice', () => {
     })
 
     it('should return a invoice model', () => {
-      const isinvoiceResponseModelValid = invoice.response.validate(responseBody)
+      const isinvoiceResponseModelValid = Invoice.response.validate(responseBody)
 
       expect(isinvoiceResponseModelValid).to.be.true
     })
@@ -54,7 +54,7 @@ describe('invoice', () => {
     })
 
     it('should return a invoice model', () => {
-      const isinvoiceResponseModelValid = invoice.response.validate(responseBody)
+      const isinvoiceResponseModelValid = Invoice.response.validate(responseBody)
 
       expect(isinvoiceResponseModelValid).to.be.true
     })
@@ -77,7 +77,7 @@ describe('invoice', () => {
     })
 
     it('should return a invoice model', () => {
-      const isinvoiceResponseModelValid = invoice.response.validate(responseBody)
+      const isinvoiceResponseModelValid = Invoice.response.validate(responseBody)
 
       expect(isinvoiceResponseModelValid).to.be.true
     })
@@ -100,7 +100,7 @@ describe('invoice', () => {
     })
 
     it('should return a invoice model', () => {
-      const isinvoiceResponseModelValid = invoice.response.validate(responseBody)
+      const isinvoiceResponseModelValid = Invoice.response.validate(responseBody)
 
       expect(isinvoiceResponseModelValid).to.be.true
     })
@@ -119,7 +119,7 @@ describe('invoice', () => {
     })
 
     it('should return a invoice model', () => {
-      const isinvoiceResponseModelValid = invoice.response.validate(responseBody)
+      const isinvoiceResponseModelValid = Invoice.response.validate(responseBody)
 
       expect(isinvoiceResponseModelValid).to.be.true
     })
