@@ -31,7 +31,7 @@ exports[`ExchangeRate Model response should match the snapshot 1`] = `
 Object {
   "properties": Object {
     "expiry": Object {
-      "type": "string",
+      "type": "number",
     },
     "fromAmount": Object {
       "type": "number",
@@ -43,9 +43,11 @@ Object {
       "type": "string",
     },
     "rate": Object {
+      "optional": true,
       "type": "number",
     },
     "timeCreated": Object {
+      "optional": true,
       "type": "string",
     },
     "toAmount": Object {

@@ -2,6 +2,7 @@ import CONFIG from '../config'
 import VeemSDK from 'VeemSDK'
 import Payment from 'models/payment'
 import every from 'lodash/every'
+import uniqueId from 'lodash/uniqueId'
 
 const PAYMENT = {
   amount: {
@@ -21,11 +22,11 @@ const PAYMENT = {
 const PAYMENTS = [
   {
     ...PAYMENT,
-    batchItemId: 1,
+    batchItemId: uniqueId(),
   },
   {
     ...PAYMENT,
-    batchItemId: 2,
+    batchItemId: uniqueId(),
   },
 ]
 
@@ -192,7 +193,7 @@ describe('Payment', () => {
         responseBody = await veemSDK.payment.getBatch(batchResponseBody.batchId)
       })
 
-      it('should not return a batch response body', () => {
+      it('should return a batch response body', () => {
         expect(responseBody).to.be.a.batchResponseBody()
       })
     })

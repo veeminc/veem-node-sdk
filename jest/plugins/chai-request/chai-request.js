@@ -5,7 +5,7 @@ const PagedResponseBodyTemplate = struct({
   totalElements: 'number',
   last: 'boolean',
   totalPages: 'number',
-  sort: 'null',
+  sort: 'null|array',
   size: 'number',
   number: 'number',
   first: 'boolean',
