@@ -2,6 +2,7 @@ import CONFIG from '../config'
 import VeemSDK from 'VeemSDK'
 import Attachment from 'models/attachment'
 import fs from 'fs'
+import { spy } from 'sinon'
 import { file } from 'chai-files'
 import rimraf from 'rimraf'
 
@@ -19,12 +20,13 @@ describe('attachment', () => {
   })
 
   describe('attachment.upload', () => {
+    const callback = spy()
     const uploadAttachmentBuffer = fs.createReadStream(`${__dirname}/assets/upload.png`)
 
     let responseBody
 
     beforeAll(async () => {
-      responseBody = await veemSDK.attachment.upload(uploadAttachmentBuffer)
+      responseBody = await veemSDK.attachment.upload(uploadAttachmentBuffer, callback)
     })
 
     it('should return a Attachment model', () => {
@@ -32,9 +34,14 @@ describe('attachment', () => {
 
       expect(isPaymentResponseModelValid).to.be.true
     })
+
+    it('should have invoked the callback', () => {
+      expect(callback).to.have.been.calledOnce
+    })
   })
 
   describe('attachment.download', () => {
+    const callback = spy()
     const expectedDownloadAttachmentFilePath = `${__dirname}/assets/download.png`
     const actualDownloadedAttachmentPath = `${TEMP_ASSETS_DIRECTORY}/attachment-assertion.png`
     const downloadAttachmentBuffer = fs.createReadStream(expectedDownloadAttachmentFilePath)
@@ -42,7 +49,7 @@ describe('attachment', () => {
 
     beforeAll(async () => {
       const attachment = await veemSDK.attachment.upload(downloadAttachmentBuffer)
-      responseBody = await veemSDK.attachment.download(attachment)
+      responseBody = await veemSDK.attachment.download(attachment, callback)
 
       fs.writeFileSync(actualDownloadedAttachmentPath, responseBody)
     })
@@ -50,6 +57,10 @@ describe('attachment', () => {
     it('should return the same file as what was uploaded', () => {
       expect(file(actualDownloadedAttachmentPath)).to.exist
       expect(file(actualDownloadedAttachmentPath)).to.equal(file(expectedDownloadAttachmentFilePath))
+    })
+
+    it('should have invoked the callback', () => {
+      expect(callback).to.have.been.calledOnce
     })
   })
 })
