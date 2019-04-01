@@ -174,7 +174,7 @@ const {
 // invoice.sendById(36913, callback)
 // invoice.cancel(36913, callback)
 
-// contact.list(callback)
+// contact.list(null, callback)
 // contact.get(1459, callback)
 // contact.getBatch(123, callback)
 // contact.create(CONTACT, callback)
