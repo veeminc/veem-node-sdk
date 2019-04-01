@@ -2,8 +2,8 @@
 
 Method | HTTP request
 ------------- | -------------
-[**quote**](exchange-rate.md#quote) | **GET** /veem/v1.1/exchangerates/quotes
-[**quote (batch)**](exchange-rate.md#quote) | **GET** /veem/v1.1/exchangerates/quotes/batch
+[**quote**](exchange-rate.md#quote) | **POST** /veem/v1.1/exchangerates/quotes
+[**quote (batch)**](exchange-rate.md#quote) | **POST** /veem/v1.1/exchangerates/quotes/batch
 
 ## quote
 

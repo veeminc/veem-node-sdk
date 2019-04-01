@@ -5,8 +5,8 @@ Method | HTTP request
 [**get**](contact.md#get) | **GET** /veem/v1.1/contacts/{contact_id}
 [**list**](contact.md#list) | **GET** /veem/v1.1/contacts
 [**getBatch**](contact.md#getBatch) | **GET** /veem/v1.1/contacts/batch/{batch_id}
-[**create**](contact.md#create) | **GET** /veem/v1.1/contacts
-[**create (batch)**](contact.md#create) | **GET** /veem/v1.1/contacts/batch
+[**create**](contact.md#create) | **POST** /veem/v1.1/contacts
+[**create (batch)**](contact.md#create) | **POST** /veem/v1.1/contacts/batch
 
 ## get
 
