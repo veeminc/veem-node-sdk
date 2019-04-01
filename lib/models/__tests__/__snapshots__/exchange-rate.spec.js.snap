@@ -43,10 +43,12 @@ Object {
       "type": "string",
     },
     "rate": Object {
-      "type": "number?",
+      "optional": true,
+      "type": "number",
     },
     "timeCreated": Object {
-      "type": "string?",
+      "optional": true,
+      "type": "string",
     },
     "toAmount": Object {
       "type": "number",
