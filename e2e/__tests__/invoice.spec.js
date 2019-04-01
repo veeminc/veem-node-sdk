@@ -32,9 +32,9 @@ describe('invoice', () => {
     })
 
     it('should return a invoice model', () => {
-      const isinvoiceResponseModelValid = Invoice.response.validate(responseBody)
+      const isInvoiceResponseModelValid = Invoice.response.validate(responseBody)
 
-      expect(isinvoiceResponseModelValid).to.be.true
+      expect(isInvoiceResponseModelValid).to.be.true
     })
 
     it('should set the `status` to `Sent`', () => {
@@ -54,9 +54,9 @@ describe('invoice', () => {
     })
 
     it('should return a invoice model', () => {
-      const isinvoiceResponseModelValid = Invoice.response.validate(responseBody)
+      const isInvoiceResponseModelValid = Invoice.response.validate(responseBody)
 
-      expect(isinvoiceResponseModelValid).to.be.true
+      expect(isInvoiceResponseModelValid).to.be.true
     })
 
     xit('should set the `status` to `Drafted`', () => {
@@ -77,9 +77,9 @@ describe('invoice', () => {
     })
 
     it('should return a invoice model', () => {
-      const isinvoiceResponseModelValid = Invoice.response.validate(responseBody)
+      const isInvoiceResponseModelValid = Invoice.response.validate(responseBody)
 
-      expect(isinvoiceResponseModelValid).to.be.true
+      expect(isInvoiceResponseModelValid).to.be.true
     })
 
     it('should set the `status` to `Sent`', () => {
@@ -100,9 +100,9 @@ describe('invoice', () => {
     })
 
     it('should return a invoice model', () => {
-      const isinvoiceResponseModelValid = Invoice.response.validate(responseBody)
+      const isInvoiceResponseModelValid = Invoice.response.validate(responseBody)
 
-      expect(isinvoiceResponseModelValid).to.be.true
+      expect(isInvoiceResponseModelValid).to.be.true
     })
   })
 
@@ -119,9 +119,9 @@ describe('invoice', () => {
     })
 
     it('should return a invoice model', () => {
-      const isinvoiceResponseModelValid = Invoice.response.validate(responseBody)
+      const isInvoiceResponseModelValid = Invoice.response.validate(responseBody)
 
-      expect(isinvoiceResponseModelValid).to.be.true
+      expect(isInvoiceResponseModelValid).to.be.true
     })
 
     it('should set the `status` to `Cancelled`', () => {
