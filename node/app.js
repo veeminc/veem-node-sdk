@@ -185,7 +185,7 @@ const {
 // exchangeRate.quote(QUOTE, callback)
 // exchangeRate.quote(QUOTES, callback)
 
-attachment.upload(imageBuffer, callback)
+// attachment.upload(imageBuffer, callback)
 // attachment.download(ATTACHMENT_RESPONSE).then(saveFileAndOpen(ATTACHMENT_RESPONSE.name))
 
 // webhook.get(1, callback)

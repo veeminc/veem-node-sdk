@@ -35,9 +35,9 @@ describe('attachment', () => {
   })
 
   describe('attachment.download', () => {
-    const downloadAttachmentFilePath = `${__dirname}/assets/download.png`
-    const downloadAttachmentBuffer = fs.createReadStream(downloadAttachmentFilePath)
+    const expectedDownloadAttachmentFilePath = `${__dirname}/assets/download.png`
     const actualDownloadedAttachmentPath = `${TEMP_ASSETS_DIRECTORY}/attachment-assertion.png`
+    const downloadAttachmentBuffer = fs.createReadStream(expectedDownloadAttachmentFilePath)
     let responseBody
 
     beforeAll(async () => {
@@ -49,7 +49,7 @@ describe('attachment', () => {
 
     it('should return the same file as what was uploaded', () => {
       expect(file(actualDownloadedAttachmentPath)).to.exist
-      expect(file(actualDownloadedAttachmentPath)).to.equal(file(downloadAttachmentFilePath))
+      expect(file(actualDownloadedAttachmentPath)).to.equal(file(expectedDownloadAttachmentFilePath))
     })
   })
 })
