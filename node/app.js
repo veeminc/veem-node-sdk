@@ -154,7 +154,7 @@ const {
   accessToken: '246ff312-f7ff-496f-bab2-38d132434ba7',
 })
 
-// metadata.getCountryCurrencyMap(callback)
+// metadata.getCountryCurrencyMap(null, callback)
 
 // payment.list(null, callback)
 // payment.get(54090, callback)
@@ -174,7 +174,7 @@ const {
 // invoice.sendById(36913, callback)
 // invoice.cancel(36913, callback)
 
-// contact.list(callback)
+// contact.list(null, callback)
 // contact.get(1459, callback)
 // contact.getBatch(123, callback)
 // contact.create(CONTACT, callback)
