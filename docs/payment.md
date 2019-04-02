@@ -5,10 +5,10 @@ Method | HTTP request
 [**get**](payment.md#get) | **GET** /veem/v1.1/payments/{payment_id}
 [**list**](payment.md#list) | **GET** /veem/v1.1/payments
 [**getBatch**](payment.md#getBatch) | **GET** /veem/v1.1/payments/batch/{batch_id}
-[**send (single)**](payment.md#send) | **POST** /veem/v1.1/payments
+[**send**](payment.md#send) | **POST** /veem/v1.1/payments
 [**send (batch)**](payment.md#send)| **POST** /veem/v1.1/batch/payments
 [**sendById**](payment.md#sendById) | **POST** /veem/v1.1/payments/{payment_id}/approve
-[**draft (single)**](payment.md#draft) | **POST** /veem/v1.1/payments
+[**draft**](payment.md#draft) | **POST** /veem/v1.1/payments
 [**draft (batch)**](payment.md#send)| **POST** /veem/v1.1/batch/payments
 [**cancel**](payment.md#cancel) | **POST** /veem/v1.1/payments/{payment_id}/cancel
 
