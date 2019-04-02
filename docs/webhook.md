@@ -2,8 +2,8 @@
 
 Method | HTTP request
 ------------- | -------------
-[**get**](webhooks.md#get) | **GET** /veem/v1.1/webhooks
-[**list**](webhooks.md#list) | **GET** /veem/v1.1/webhooks/{webhook_id}
+[**get**](webhook.md#get) | **GET** /veem/v1.1/webhooks/{webhook_id}
+[**list**](webhook.md#list) | **GET** /veem/v1.1/webhooks
 
 ## get
 
