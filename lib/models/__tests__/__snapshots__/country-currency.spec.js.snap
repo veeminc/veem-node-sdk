@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CountryCurrency Model response should match the snapshot 1`] = `
+Object {
+  "properties": Object {
+    "country": Object {
+      "type": "string",
+    },
+    "countryName": Object {
+      "type": "string",
+    },
+    "invoiceAttachmentRequired": Object {
+      "type": "boolean",
+    },
+    "purposeOfPaymentInfo": Object {
+      "items": Object {
+        "properties": Object {
+          "countryCode": Object {
+            "type": "string",
+          },
+          "description": Object {
+            "type": "string",
+          },
+          "purposeCode": Object {
+            "type": "string",
+          },
+        },
+        "type": "object",
+      },
+      "type": "array",
+    },
+    "purposeOfPaymentRequired": Object {
+      "type": "boolean",
+    },
+    "receivingCurrencies": Object {
+      "type": "array",
+    },
+    "sendingCurrencies": Object {
+      "type": "array",
+    },
+  },
+  "title": "ContactResponse",
+  "type": "object",
+}
+`;

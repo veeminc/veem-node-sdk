@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Customer Model response should match the snapshot 1`] = `
+Object {
+  "properties": Object {
+    "email": Object {
+      "type": "string",
+    },
+    "firstName": Object {
+      "type": "string",
+    },
+    "id": Object {
+      "type": "number",
+    },
+    "isContact": Object {
+      "type": "boolean",
+    },
+    "isoCountryCode": Object {
+      "type": "string",
+    },
+    "lastName": Object {
+      "type": "string",
+    },
+    "name": Object {
+      "type": "string",
+    },
+  },
+  "title": "CustomerResponse",
+  "type": "object",
+}
+`;
