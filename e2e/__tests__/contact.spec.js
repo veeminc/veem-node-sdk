@@ -29,8 +29,6 @@ const CONTACTS = [
   },
 ]
 
-jest.setTimeout(20000)
-
 describe('contact', () => {
   const veemSDK = new VeemSDK(CONFIG)
 

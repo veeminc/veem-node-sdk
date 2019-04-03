@@ -31,8 +31,6 @@ const PAYMENTS = [
   },
 ]
 
-jest.setTimeout(20000)
-
 describe('Payment', () => {
   const veemSDK = new VeemSDK(CONFIG)
 

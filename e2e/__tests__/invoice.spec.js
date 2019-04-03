@@ -18,8 +18,6 @@ const INVOICE = {
   },
 }
 
-jest.setTimeout(20000)
-
 describe('invoice', () => {
   const veemSDK = new VeemSDK(CONFIG)
 

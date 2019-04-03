@@ -14,5 +14,6 @@ module.exports = {
     '<rootDir>/jest/setup-chai-plugins.js',
   ],
   testMatch: ['**/__tests__/?(*.)+(spec).js'],
+  testRunner: 'jest-circus/runner',
   verbose: true,
 }
