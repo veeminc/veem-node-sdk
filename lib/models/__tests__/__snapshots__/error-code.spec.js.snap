@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorCode Model response should match the snapshot 1`] = `
+Object {
+  "properties": Object {
+    "errorCode": Object {
+      "type": "number",
+    },
+    "errorMessage": Object {
+      "type": "string",
+    },
+  },
+  "title": "ErrorCodeResponse",
+  "type": "object",
+}
+`;
