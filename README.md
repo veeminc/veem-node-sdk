@@ -7,6 +7,7 @@ The Veem Node SDK provides a simple interface for interacting with the Veem Gate
 ## References
 
 - [Veem Gateway API](https://developer.veem.com/reference)
+- [Developer Dashboard]()
 
 ## Installation
 
@@ -16,7 +17,7 @@ npm install veem-node-sdk --save
 
 ## Usage
 
-The Veem Node SDK requires you to generate an access token in order to authenticate the requests. You can manage your applications [here]().
+The Veem Node SDK requires you to generate an access token in order to authenticate the requests. You can manage your applications and generate access tokens from the [Developer Dashboard]().
 
 ```javascript
 import Veem from 'veem-node-sdk'
@@ -36,4 +37,25 @@ The SDK supports Promises for handling responses and errors:
 Veem.payment.send(payment)
   .then(responseBody => console.log(responseBody))
   .catch(error => console.error(error))
+```
+
+## Development
+
+### Setup Environment
+
+```
+npm install
+```
+
+### Run Tests
+```
+npm run test
+```
+
+### Publishing
+
+Before publishing a new version, make sure that all controller methods are still passing the E2E tests.
+
+```
+npm run test:e2e
 ```
