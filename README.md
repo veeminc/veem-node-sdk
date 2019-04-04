@@ -2,11 +2,11 @@
 
 [![CircleCI](https://circleci.com/gh/aligncommerce/veem-node-sdk/tree/master.svg?style=svg&circle-token=b130e117704a92b3e0606ebcd8068eda7c2a54c6)](https://circleci.com/gh/aligncommerce/veem-node-sdk/tree/master)
 
-The Veem Node SDK provides a simple interface for interacting with the Veem Gateway API for server-side Javascript applications.
+The Veem Node SDK provides a simple interface for interacting with the Veem Global Payments API for server-side Javascript applications.
 
 ## References
 
-- [Veem Gateway API](https://developer.veem.com/reference)
+- [Veem Global Payments API](https://developer.veem.com/reference)
 - [Developer Dashboard]()
 
 ## Installation
