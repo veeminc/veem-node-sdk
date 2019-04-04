@@ -51,11 +51,3 @@ npm install
 ```
 npm run test
 ```
-
-### Publishing
-
-Before publishing a new version, make sure that all controller methods are still passing the E2E tests.
-
-```
-npm run test:e2e
-```
