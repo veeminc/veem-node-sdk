@@ -9,9 +9,9 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "jest -- ./lib",
-    "test:e2e": "jest -- ./e2e",
-    "test:plugins": "jest -- ./jest/plugins",
+    "test": "jest ./lib",
+    "test:e2e": "jest ./e2e --runInBand",
+    "test:plugins": "jest ./jest/plugins",
     "test:ci": "npm run test:plugins -- --forceExit & npm run test -- --forceExit",
     "start": "nodemon --exec babel-node node/app.js",
     "build": "babel lib -d dist --ignore '**/__tests__'"
