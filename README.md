@@ -7,7 +7,7 @@ The Veem Node SDK provides a simple interface for interacting with the Veem Glob
 ## References
 
 - [Veem Global Payments API](https://developer.veem.com/reference)
-- [Developer Dashboard]()
+- [Developer Dashboard](https://developer.veem.com/page/apps-dev-dashboard)
 
 ## Installation
 
@@ -17,7 +17,7 @@ npm install veem-node-sdk --save
 
 ## Usage
 
-The Veem Node SDK requires you to generate an access token in order to authenticate the requests. You can manage your applications and generate access tokens from the [Developer Dashboard]().
+The Veem Node SDK requires you to generate an access token in order to authenticate the requests. You can manage your applications and generate access tokens from the [Developer Dashboard](https://developer.veem.com/page/apps-dev-dashboard).
 
 ```javascript
 import Veem from 'veem-node-sdk'
