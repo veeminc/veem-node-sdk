@@ -1,6 +1,6 @@
 # veem-node-sdk
 
-[![CircleCI](https://circleci.com/gh/veeminc/veem-node-sdk/tree/develop.svg?style=svg&circle-token=b130e117704a92b3e0606ebcd8068eda7c2a54c6)](https://circleci.com/gh/veeminc/veem-node-sdk/tree/develop)
+[![CircleCI](https://circleci.com/gh/veeminc/veem-node-sdk/tree/develop.svg?style=svg&circle-token=b130e117704a92b3e0606ebcd8068eda7c2a54c6)](https://circleci.com/gh/veeminc/veem-node-sdk/tree/develop) [![npm version](https://badge.fury.io/js/veem-node-sdk.svg)](https://badge.fury.io/js/veem-node-sdk)
 
 The Veem Node SDK provides a simple interface for interacting with the Veem Global Payments API for server-side Javascript applications.
 
