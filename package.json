@@ -1,7 +1,7 @@
 {
-  "name": "veem-node-sdk",
+  "name": "Veem Node SDK",
   "version": "1.0.0",
-  "description": "",
+  "description": "Node.js Library for the Veem Global Payments API",
   "main": "index.js",
   "author": "",
   "license": "MIT",
