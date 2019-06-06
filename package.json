@@ -8,6 +8,10 @@
   "directories": {
     "lib": "lib"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/veeminc/veem-node-sdk.git"
+  },
   "scripts": {
     "test": "jest ./lib",
     "test:e2e": "jest ./e2e --runInBand",
