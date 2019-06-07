@@ -11,8 +11,8 @@ const TEMP_ASSETS_DIRECTORY = `${__dirname}/.tmp`
 describe('attachment', () => {
   const veemSDK = new VeemSDK(CONFIG)
 
-  beforeAll(async () => {
-    await fs.mkdir(TEMP_ASSETS_DIRECTORY, { recursive: true })
+  beforeAll(() => {
+    fs.mkdirSync(TEMP_ASSETS_DIRECTORY, { recursive: true })
   })
 
   afterAll(() => {
