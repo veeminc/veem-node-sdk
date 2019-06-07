@@ -5,15 +5,14 @@ import fs from 'fs'
 import { spy } from 'sinon'
 import { file } from 'chai-files'
 import rimraf from 'rimraf'
-import noop from 'lodash/noop'
 
 const TEMP_ASSETS_DIRECTORY = `${__dirname}/.tmp`
 
 describe('attachment', () => {
   const veemSDK = new VeemSDK(CONFIG)
 
-  beforeAll(async () => {
-    await fs.mkdir(TEMP_ASSETS_DIRECTORY, { recursive: true }, noop)
+  beforeAll(() => {
+    fs.mkdirSync(TEMP_ASSETS_DIRECTORY, { recursive: true })
   })
 
   afterAll(() => {
