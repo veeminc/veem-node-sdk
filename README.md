@@ -7,7 +7,7 @@ The Veem Node SDK provides a simple interface for interacting with the Veem Glob
 ## References
 
 - [Veem Global Payments API](https://developer.veem.com/reference)
-- [Developer Dashboard](https://developer.veem.com/page/apps-dev-dashboard)
+- [Developer Dashboard](https://developer.veem.com/page/dev-dashboard-sandbox)
 
 ## Installation
 
