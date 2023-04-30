@@ -38,7 +38,7 @@
     "@babel/runtime": "^7.7.2",
     "JSV": "^4.0.2",
     "babel-jest": "^24.9.0",
-    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-module-resolver": "^5.0.0",
     "chai": "^4.2.0",
     "chai-files": "^1.4.0",
     "chai-jest-diff": "^1.0.2",
